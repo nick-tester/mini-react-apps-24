@@ -2,7 +2,7 @@ import React from "react";
 import * as Exercise from "./Pages";
 
 const App = () => {
-    return <Exercise.Tours />
+    return <Exercise.Reviews />
 };
 
 export default App;
