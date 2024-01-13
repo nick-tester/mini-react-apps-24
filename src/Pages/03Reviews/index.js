@@ -9,17 +9,35 @@ const ReviewsPage = () => {
 
     const subject = people[index];
 
+    const checkIndex = (n) => {
+        if (n > people.length - 1) {
+            return 0;
+        };
+        if (n < 0) {
+            return people.length - 1;
+        };
+        return n;
+    };
+
     const prevPerson = () => {
         setIndex(currentIndex => {
             const newIndex = currentIndex - 1;
-            return newIndex;
+            // if (newIndex < 0) {
+            //     return people.length - 1;
+            // };
+            // return newIndex;
+            return checkIndex(newIndex);
         });
     };
 
     const nextPerson = () => {
         setIndex(currentIndex => {
             const newIndex = currentIndex + 1;
-            return newIndex;
+            // if (newIndex > people.length - 1) {
+            //     return 0;
+            // };
+            // return newIndex;
+            return checkIndex(newIndex);
         });
     };
 
